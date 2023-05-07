@@ -1,0 +1,240 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+}
+body{
+	background-image: url(img/fondo.jpg);
+	background-size: cover;
+    background: black;
+}
+nav{
+	max-width: 1500px;
+	margin: 610px;
+	background-color: #333;
+	font-size: 20px;
+	margin-top: 51px;
+}
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+    
+
+  
+}
+.menu-horizontal > li > a{
+	display: block;
+	padding: 20px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: red;
+    
+
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 1000px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 10px 29px 10px 15px;
+    width: 145%;
+    
+
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+}
+
+nav ul li {
+  float: left;
+  font-size: 40px;
+}
+
+
+
+
+
+
+header {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+nav {
+  background: rgba(0,0,0,0.9);
+  width: 1000%;
+  position: fixed;
+  z-index: 300;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 10s infinite alternate linear;
+    width: 200%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes cambio{
+ 
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -100%;}
+ 
+
+    
+    100%{margin-left: -100%;}
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--green: hsl(162, 45%, 56%);
+	--lead: hsl(162, 2%, 56%);
+	--blue: hsl(220, 85%, 57%);
+	--violet: hsl(272, 92%, 32%);
+	--tex-white: hsl(0, 0%, 100%);
+	--text-light-gray: hsl(0, 0%, 90%);
+	--body-bg-color: blue;
+	--glass-bg-color: hsla(0, 0%, 100%, 0.5);
+	--border-color: hsla(0, 0%, 100%, 0,25%);
+	--blur: blur(10px);
+	--button-hove-color: hsla(0, 0%, 0%, 0.3);
+}
+.formulario{
+    background: rgb(236, 221, 8);
+    width: 350px;
+	margin: auto;
+	margin-top: 100px;
+}
+.form-content .box{
+	width: 350px;
+	margin: auto;
+	margin-top: 100px;
+
+	border-color: var(--glass-bg-color);
+	border: 1px solid var(--border-color);
+	padding: 40px 50px;
+	border-radius: 19px;
+	backdrop-filter:var(--blur);
+	box-shadow: 2px 10px 50px rgb(44, 42, 42);
+}
+.form_main{
+	min-height: 100vh;
+	padding: 120px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+.form_content{
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+	z-index: 4;
+
+}
+
+.form-content h3{
+	font-size: 35px;
+	text-align: center;
+	line-height: 1.2;
+	color: var(--tex-white);
+}
+.form-content .form{
+	margin: 25px 0 20px;
+} 
+.form-content .input-box{
+	margin: 25px;
+}
+.form-content .input-control{
+	display: block;
+	height: 50px;
+	width: 100%;
+	background-color: var(--button-hove-color);
+	border: none;
+	border-bottom: 1px solid var(--border-color);
+	color: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	font-size: 20px;
+	text-align: center;
+}
+ .form-content .input-control:focus{
+ 	outline: none;
+ }
+.form-content .input.link{
+	margin-top: 10px;
+}
+.form-content .btn{
+	height: 45px;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	font-family: inherit;
+	cursor: pointer;
+	border-radius: 25px;
+	user-select: none;
+	background: linear-gradient(to right, var(--green), var(--lead));
+	border: none;
+	color: var(--tex-white);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+.form-content .btn::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	transition: background-color 0.5s ease;
+	z-index: -1;
+}
+.form-content .btn:hover::before{
+	background-color: var(--button-hove-color);
+}
+
